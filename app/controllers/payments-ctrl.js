@@ -93,7 +93,7 @@ exports.payment = (req, res, payload, callbackPayload) => {
             body: xmlRequest
         }).then(function (parsedBody) {
             console.log("[PAYMENT RESPONSE] %s", parsedBody);
-            this.handlePaymentResponse(paymentRequest, parsedBody);
+            this.handlePaymentResponse(res, paymentRequest, parsedBody);
         }).catch(function (err) {
             console.error(err);
             res.send(localeService.i18n("errors.generic"));
@@ -211,14 +211,22 @@ exports.savePaymentRequest = (payload, terminalConfiguration) => {
     return paymentRequest.save();
 }
 
-exports.handlePaymentResponse = (paymentRequest, xmlResponse) => {
+exports.handlePaymentResponse = (res, paymentRequest, xmlResponse) => {
     // Parse XML into javascript Object
-    let response = CommonUtils.parseXml(terminalConfiguration);
+    let _$ = CommonUtils.parseXml(terminalConfiguration);
 
-    if(response.PAYMENTRESPONSE.RESPONSECODE == 'A') {
-
+    if(_$.ERROR) {
+        console.log("[PAYMENT RESPONSE] %s", _$.ERROR.ERRORSTRING);
+        res.send(_$.ERROR.ERRORSTRING);
+    } else if(_$.PAYMENTRESPONSE) {
+        console.log("[PAYMENT RESPONSE] %s - %s", _$.PAYMENTRESPONSE.RESPONSECODE, _$.PAYMENTRESPONSE.RESPONSETEXT);
+        if(_$.PAYMENTRESPONSE.RESPONSECODE == 'A') {
+            res.send("Payment processed successfully! :clap:"); // TODO generate receipt
+        } else {
+            res.send("Payment was declined!"); // TODO retry message
+        }
     } else {
-
+        res.send(localeService.i18n("errors.generic"));
     }
 }
 

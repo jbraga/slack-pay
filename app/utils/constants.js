@@ -5,14 +5,14 @@ module.exports = {
     /**
      * Authentication Token
      */
-    TOKEN_BEARER : "Bearer xoxp-349674343573-350587379687-349616935154-6567e4c4a3dfb0e7ca43f8a3a576ed55",
+    TOKEN_BEARER : "",
 
     /**
      * URL's
      */
     OPEN_SLACK_DIALOG_URL : "https://slack.com/api/dialog.open",
     POST_SLACK_MESSAGE_URL: "https://slack.com/api/chat.postMessage",
-    WORLDNET_GATEWAY_ENDPOINT : "https://devpayments.worldnettps.com/merchant/xmlpayment",
+    WORLDNET_GATEWAY_ENDPOINT : "",
 
     /**
      * Interactive Components' Callbacks

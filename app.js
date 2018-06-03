@@ -22,8 +22,7 @@ app.use(bodyParser.json());
  * Database Configuration
  * https://cloud.mongodb.com/v2/5ae21c03df9db17ddb07369f#clusters
  */
-mongoose.connect('mongodb+srv://mongodb-admin:' + 
-    process.env.MONGO_ATLAS_PW + '@worldnet-slack-app-3mgdz.mongodb.net/test');
+mongoose.connect();
 
 // set our port
 var port = process.env.PORT || 8080;        
