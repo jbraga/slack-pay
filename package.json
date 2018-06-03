@@ -1,0 +1,25 @@
+{
+  "name": "slack-app",
+  "version": "1.0.0",
+  "description": "Worldnet Payment Integration",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "J. B. Neto",
+  "license": "ISC",
+  "dependencies": {
+    "awilix": "^3.0.7",
+    "body-parser": "^1.18.2",
+    "date-pattern": "^1.0.3",
+    "express": "^4.16.3",
+    "fast-xml-parser": "^3.10.0",
+    "i18n": "^0.8.3",
+    "mongoose": "^5.0.16",
+    "nodemon": "^1.17.4",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "slack-message-builder": "^1.2.0",
+    "xml2js": "^0.4.19"
+  }
+}

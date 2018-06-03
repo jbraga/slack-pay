@@ -1,0 +1,54 @@
+{
+	"errors": {
+		"generic": "Oops! Something went wrong, please don't give up on us and try again."
+	},
+	"buttons": {
+		"save": "Save",
+		"charge": "Charge",
+		"decline": "Decline",
+		"accept": "Accept",
+		"pay": "Pay",
+		"pay_now": "Pay Now",
+		"polite_yes": "Yes, please!",
+		"polite_no": "No, thanks!"
+	},
+	"dialogs": {
+		"terminal_setup": {
+			"title": "Terminal Setup",
+			"terminal_number": "Terminal Number",
+			"display_name": "Display Name",
+			"terminal_secret": "Secret"
+		},
+		"payment_request": {
+			"title": "Charge for your services",
+			"amount": "Amount",
+			"terminal": "Terminal",
+			"description": "Description"
+		},
+		"payment_details": {
+			"title": "Inform your card details",
+			"cardholder_name": "Cardholder Name",
+			"card_type": "Card Type",
+			"card_number": "Card Number",
+			"expiry_date": "Expiry Date",
+			"cvv": "CVV"
+		}
+	},
+	"messages": {
+		"payment_confirmation": {
+			"title": "Hi there, %s has requested a payment...",
+			"attachment": "Please, click `Accept` if you recognise this transaction"
+		},
+		"first_payment": {
+			"title": "Yayyy :tada: You're all setup!",
+			"attachment": "It's time to send your first charge request. Do want to proceed?"
+		},
+		"enter_payment_details": "Please, fill out your payment request details.",
+		"enter_card_details": "Please, inform your card details.",
+		"nothing_personal": "It's all right, we won't take it personal."
+	},
+	"You have %s message": {
+		"one": "You have %s message",
+		"other": "You have %s messages"
+	}
+}
